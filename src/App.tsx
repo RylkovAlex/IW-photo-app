@@ -30,7 +30,7 @@ const App: React.FC<AppProps> = ({ authStore }) => {
         albumsStore.getAlbums();
       }
     }
-  }, [authStore]);
+  }, [authStore?.isAuth]);
 
   if (authStore!.isAuth) {
     if (photosStore.isFetchingPhotos || albumsStore.isFetchingAlbums) {
